@@ -8,17 +8,17 @@ Built with HTML, custom CSS and Bootstrap 5.
 ## Screenshots (live page)
 | Desktop (1440px) | Tablet (768px) |
 |---|---|
-| ![Desktop](screenshots/desktop-1440-full.png) | ![Tablet](screenshots/tablet-768-full.png) |
+| ![Desktop](Screenshots/desktop-1440-full.png) | ![Tablet](Screenshots/tablet-768-full.png) |
 
 | Mobile (390px) | Mobile menu open |
 |---|---|
-| ![Mobile](screenshots/mobile-390-full.png) | ![Mobile menu](screenshots/mobile-390-menu-open.png) |
+| ![Mobile](Screenshots/mobile-390-full.png) | ![Mobile menu](Screenshots/mobile-390-menu-open.png) |
 
 ## Files
 - `index.html`: page structure (header, hero, product section, about strip, footer)
 - `styles.css`: all custom styling, commented by section
 - `images/`: four product photos (JPG, cropped square and compressed)
-- `screenshots/`: desktop (1440px), tablet (768px), mobile (390px, plus menu open)
+- `Screenshots/`: desktop (1440px), tablet (768px), mobile (390px, plus menu open)
 
 To run it locally, open `index.html` in a browser. Bootstrap loads from a CDN, so an internet connection is needed.
 
