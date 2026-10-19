@@ -1,0 +1,215 @@
+/* =========================================================
+   Northwind Goods - custom styles
+   Bootstrap handles the grid, navbar and buttons.
+   This file sets the brand colours, fonts and spacing.
+   ========================================================= */
+
+/* ---------- 1. Design tokens (colours, radius) ---------- */
+:root {
+  --ink: #101828;        /* main dark colour for text and headings */
+  --muted: #667085;      /* secondary text */
+  --accent: #2f5bff;     /* brand blue for primary buttons */
+  --accent-dark: #1f43d1;
+  --soft: #f4f6fb;       /* light section background */
+  --line: #e4e7ec;       /* borders */
+  --radius: 16px;
+}
+
+/* ---------- 2. Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+/* Keeps section titles visible below the sticky header */
+section[id], footer[id] { scroll-margin-top: 70px; }
+
+/* ---------- 3. Header / navbar ---------- */
+.site-header { border-bottom: 1px solid var(--line); }
+
+.brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--ink);
+}
+.nav-link:hover { color: var(--accent); }
+
+/* ---------- 4. Buttons (custom colours on top of Bootstrap) ---------- */
+.btn { font-weight: 600; border-radius: 10px; }
+
+.btn-accent {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--accent-dark);
+  --bs-btn-hover-border-color: var(--accent-dark);
+  --bs-btn-active-bg: var(--accent-dark);
+  --bs-btn-active-border-color: var(--accent-dark);
+}
+
+.btn-ink {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ink);
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-border-color: #000;
+}
+
+.btn-outline-ink {
+  --bs-btn-color: var(--ink);
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible, .btn:focus-visible, .navbar-toggler:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- 5. Hero ---------- */
+.hero {
+  background: var(--soft);
+  padding: 5rem 0;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 3.4rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  max-width: 34rem;
+  margin: 0 auto 1.75rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.hero-img { border-radius: 24px; }
+
+/* ---------- 6. Features strip ---------- */
+.features { padding: 3rem 0; border-bottom: 1px solid var(--line); }
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: center;
+}
+.feature-icon { font-size: 2rem; color: var(--accent); line-height: 1; }
+.feature-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.15rem; }
+.feature-text { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+/* ---------- 7. Products ---------- */
+.products { padding: 5rem 0; }
+
+.section-title { font-weight: 800; font-size: 2.2rem; letter-spacing: -0.02em; }
+.section-sub { color: var(--muted); margin-bottom: 3rem; }
+
+.product-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(16, 24, 40, 0.1);
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: var(--ink);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+.product-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem; }
+.product-desc { font-size: 0.9rem; color: var(--muted); }
+.product-price { font-size: 1.25rem; font-weight: 700; }
+
+/* ---------- 8. Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: #fff;
+  padding: 4rem 0 1.5rem;
+}
+.footer-brand { color: #fff; }
+.footer-brand:hover { color: #fff; }
+.footer-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+.footer-text { color: #b7bfcc; font-size: 0.92rem; }
+.footer-links li { color: #b7bfcc; font-size: 0.92rem; margin-bottom: 0.35rem; overflow-wrap: anywhere; } /* stops long emails overflowing on phones */
+.footer-links a { color: #b7bfcc; text-decoration: none; }
+.footer-links a:hover { color: #fff; }
+.footer-line { border-color: #2a3446; opacity: 1; margin: 2rem 0 1.25rem; }
+
+.social a { color: #fff; margin-left: 1rem; text-decoration: none; }
+.social a:hover { color: var(--accent); }
+
+/* =========================================================
+   9. RESPONSIVE DESIGN (media queries)
+   Bootstrap's grid handles the card columns;
+   these rules adjust text sizes and spacing.
+   ========================================================= */
+
+/* Tablets and below (under 992px) */
+@media (max-width: 991.98px) {
+  .hero { padding: 3.5rem 0; }
+  .hero-title { font-size: 2.7rem; }
+}
+
+/* Large phones (under 768px) */
+@media (max-width: 767.98px) {
+  .products { padding: 3.5rem 0; }
+  .section-title { font-size: 1.8rem; }
+  .feature { justify-content: flex-start; }
+  .social a { margin: 0 0.5rem; }
+  .site-footer { text-align: center; }
+}
+
+/* Small phones (under 576px) */
+@media (max-width: 575.98px) {
+  .hero { padding: 2.5rem 0; }
+  .hero-title { font-size: 2.1rem; }
+  .hero-text { font-size: 1rem; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
