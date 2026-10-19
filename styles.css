@@ -1,0 +1,206 @@
+/* =====================================================
+   Kora Goods: Responsive Store Landing Page
+   Loaded after Bootstrap, so rules here win.
+   Mobile-first: base styles are for phones, media
+   queries add layout for larger screens.
+   ===================================================== */
+
+/* ---------- 1. Design tokens (change the look here) ---------- */
+:root {
+  --ink:      #14213D;   /* text and dark surfaces */
+  --cobalt:   #2B3FD6;   /* primary action colour */
+  --cobalt-d: #1F2FA8;   /* hover state */
+  --marigold: #FFB627;   /* single warm accent */
+  --mist:     #EEF2F7;   /* page background */
+  --white:    #FFFFFF;
+
+  --font: "Avenir Next", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 14px;
+  --section-space: clamp(3rem, 8vw, 6rem);   /* fluid vertical rhythm */
+}
+
+/* ---------- 2. Base ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }   /* keeps anchors clear of the sticky header */
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--mist);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.15; }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 3px;
+}
+
+/* Skip link: hidden until focused */
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--ink); color: var(--white);
+  padding: .6rem 1rem; border-radius: 8px; z-index: 2000;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- 3. Header and navigation ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid rgba(20, 33, 61, .08);
+}
+
+.brand {
+  font-weight: 800; font-size: 1.5rem;
+  color: var(--ink); text-decoration: none;
+}
+.brand span { color: var(--cobalt); font-weight: 500; }
+
+.nav-link { color: var(--ink); font-weight: 600; padding: .6rem .9rem !important; }
+.nav-link:hover { color: var(--cobalt); }
+
+.btn-cart {
+  background: var(--ink); color: var(--white);
+  font-weight: 600; border-radius: 999px; padding: .5rem 1.1rem;
+}
+.btn-cart:hover { background: var(--cobalt); color: var(--white); }
+
+/* Make the mobile menu feel intentional, not default */
+@media (max-width: 767.98px) {
+  .navbar-collapse { padding: .5rem 0 1rem; }
+  .btn-cart { display: inline-block; margin-top: .5rem; }
+}
+
+/* ---------- 4. Hero ---------- */
+.hero { padding: var(--section-space) 0; }
+
+.hero-title {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+.hero-text {
+  font-size: 1.15rem; max-width: 34rem; margin-bottom: 2rem;
+  color: rgba(20, 33, 61, .8);
+}
+
+/* Buttons */
+.btn-primary-kora {
+  background: var(--cobalt); color: var(--white);
+  font-weight: 700; padding: .85rem 1.6rem; border-radius: 999px;
+  transition: background .2s;
+}
+.btn-primary-kora:hover { background: var(--cobalt-d); color: var(--white); }
+
+.btn-ghost-kora {
+  border: 2px solid var(--ink); color: var(--ink);
+  font-weight: 700; padding: .8rem 1.6rem; border-radius: 999px;
+  transition: background .2s, color .2s;
+}
+.btn-ghost-kora:hover { background: var(--ink); color: var(--white); }
+
+/* Overlapping images: the one "memorable" element on the page */
+.hero-visual {
+  position: relative;
+  max-width: 460px; margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+.hero-img {
+  position: absolute;
+  width: 68%;
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(20, 33, 61, .18);
+}
+.hero-img-back  { top: 0;    right: 0; transform: rotate(4deg); }
+.hero-img-front { bottom: 0; left: 0;  transform: rotate(-3deg); border: 6px solid var(--white); }
+
+/* ---------- 5. Product section ---------- */
+.products {
+  padding: var(--section-space) 0;
+  background: var(--white);
+}
+
+.section-head { margin-bottom: 2.5rem; }
+.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: .5rem; }
+.section-head p  { color: rgba(20, 33, 61, .7); margin: 0; }
+
+/* Card: flex column so every "Shop Now" button lines up at the bottom */
+.product-card {
+  height: 100%;
+  display: flex; flex-direction: column;
+  background: var(--mist);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(20, 33, 61, .14);
+}
+
+.product-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+
+.product-body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem; }
+.product-name { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; }
+.product-desc { font-size: .95rem; color: rgba(20, 33, 61, .75); flex: 1; }   /* flex:1 pushes price + button down */
+.product-price { font-weight: 800; font-size: 1.15rem; margin-bottom: 1rem; }
+
+.btn-shop {
+  background: var(--ink); color: var(--white);
+  font-weight: 700; border-radius: 10px; padding: .7rem 1rem;
+  transition: background .2s, color .2s;
+}
+.btn-shop:hover { background: var(--marigold); color: var(--ink); }
+
+/* ---------- 6. About strip ---------- */
+.about {
+  padding: var(--section-space) 0;
+  background: var(--cobalt);
+  color: var(--white);
+}
+.about h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; margin: 0; }
+.about-text { font-size: 1.1rem; margin: 0; max-width: 36rem; opacity: .92; }
+
+/* ---------- 7. Footer ---------- */
+.site-footer {
+  background: var(--ink); color: rgba(255, 255, 255, .8);
+  padding: 3.5rem 0 1.5rem;
+}
+.site-footer .brand { color: var(--white); }
+.site-footer .brand span { color: var(--marigold); }
+
+.footer-note  { margin-top: .75rem; max-width: 20rem; }
+.footer-title { color: var(--white); font-size: 1rem; font-weight: 700; margin-bottom: .9rem; }
+
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: .5rem; overflow-wrap: anywhere; }
+.footer-links a { color: inherit; text-decoration: none; }
+.footer-links a:hover { color: var(--marigold); text-decoration: underline; }
+
+.footer-legal {
+  margin: 2.5rem 0 0; padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  font-size: .85rem;
+}
+
+/* ---------- 8. Larger screens ---------- */
+
+/* Tablets and up (>= 768px) */
+@media (min-width: 768px) {
+  .hero-text { font-size: 1.25rem; }
+  .product-body { padding: 1.4rem; }
+}
+
+/* Small laptops and up (>= 992px) */
+@media (min-width: 992px) {
+  .hero-visual { margin: 0 0 0 auto; }
+}
+
+/* ---------- 9. Accessibility: respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .product-card, .btn-primary-kora, .btn-ghost-kora, .btn-shop { transition: none; }
+  .product-card:hover { transform: none; }
+}

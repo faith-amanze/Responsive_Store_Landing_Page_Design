@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kora Goods | Handmade home &amp; carry</title>
+  <meta name="description" content="Kora Goods: small-batch bags, ceramics, candles and baskets made by independent makers.">
+
+  <!-- Bootstrap 5 (CSS framework): grid, navbar collapse and buttons -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+
+  <!-- Our own styles load AFTER Bootstrap so they can override it -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Keyboard users can jump straight past the navigation -->
+  <a class="skip-link" href="#shop">Skip to products</a>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+    <div class="container">
+        <a class="navbar-brand brand" href="#home">Kora<span>Goods</span></a>
+
+        <!-- Hamburger button, only visible below the md breakpoint -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-md-center gap-md-1">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Our makers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item ms-md-2"><a class="btn btn-cart" href="#shop">Cart (0)</a></li>
+          </ul>
+        </div>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="row align-items-center gy-5 gx-lg-5">
+
+          <div class="col-lg-6">
+            <h1 class="hero-title">Things worth carrying, holding and keeping.</h1>
+            <p class="hero-text">
+              Bags, ceramics, candles and baskets from independent makers.
+              Small batches, honest materials, delivered to your door.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#shop" class="btn btn-primary-kora">Shop the collection</a>
+              <a href="#about" class="btn btn-ghost-kora">Meet the makers</a>
+            </div>
+          </div>
+
+          <!-- Overlapping product images form the hero visual -->
+          <div class="col-lg-6">
+            <div class="hero-visual" aria-hidden="true">
+              <img class="hero-img hero-img-back"  src="images/basket.svg" alt="">
+              <img class="hero-img hero-img-front" src="images/tote.svg"   alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCT SECTION ================= -->
+    <section class="products" id="shop" aria-labelledby="shop-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="shop-title">This season&rsquo;s favourites</h2>
+          <p>Four pieces our customers keep coming back for.</p>
+        </div>
+
+        <!-- 1 column on phones, 2 on tablets, 4 on desktop -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4">
+
+          <!-- Product card 1 -->
+          <div class="col">
+            <article class="product-card">
+              <img src="images/tote.svg" class="product-img" alt="Cobalt leather tote bag" loading="lazy">
+              <div class="product-body">
+                <h3 class="product-name">Cobalt Everyday Tote</h3>
+                <p class="product-desc">Vegetable-tanned leather with a roomy lined interior.</p>
+                <p class="product-price">&#8358;48,000</p>
+                <a href="#" class="btn btn-shop">Shop Now</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Product card 2 -->
+          <div class="col">
+            <article class="product-card">
+              <img src="images/mug.svg" class="product-img" alt="Dark glazed ceramic mug with a gold band" loading="lazy">
+              <div class="product-body">
+                <h3 class="product-name">Night Glaze Mug</h3>
+                <p class="product-desc">Wheel-thrown stoneware, dishwasher safe, holds 350&nbsp;ml.</p>
+                <p class="product-price">&#8358;9,500</p>
+                <a href="#" class="btn btn-shop">Shop Now</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Product card 3 -->
+          <div class="col">
+            <article class="product-card">
+              <img src="images/candle.svg" class="product-img" alt="Shea butter candle in a dark jar" loading="lazy">
+              <div class="product-body">
+                <h3 class="product-name">Shea &amp; Cedar Candle</h3>
+                <p class="product-desc">Hand-poured shea wax, about 40 hours of slow burn.</p>
+                <p class="product-price">&#8358;12,000</p>
+                <a href="#" class="btn btn-shop">Shop Now</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Product card 4 -->
+          <div class="col">
+            <article class="product-card">
+              <img src="images/basket.svg" class="product-img" alt="Woven raffia storage basket" loading="lazy">
+              <div class="product-body">
+                <h3 class="product-name">Raffia Storage Basket</h3>
+                <p class="product-desc">Tightly woven by hand. Sturdy enough for laundry or books.</p>
+                <p class="product-price">&#8358;18,500</p>
+                <a href="#" class="btn btn-shop">Shop Now</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT STRIP ================= -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2>Every piece has a maker&rsquo;s name on it.</h2>
+          </div>
+          <div class="col-lg-6">
+            <p class="about-text">
+              We work with 23 independent studios and weavers. They set their own prices,
+              we handle photography, packing and delivery. Free shipping on orders over
+              &#8358;30,000.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-5">
+          <a class="brand" href="#home">Kora<span>Goods</span></a>
+          <p class="footer-note">Handmade home and carry, from makers we know by name.</p>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">Our makers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@koragoods.example">hello@koragoods.example</a></li>
+            <li>+234 800 000 0000</li>
+            <li>Lagos, Nigeria</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="footer-legal">&copy; 2026 Kora Goods. Placeholder content for a design exercise.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle: powers the mobile menu toggle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+</html>
