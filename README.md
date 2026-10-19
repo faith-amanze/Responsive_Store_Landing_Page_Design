@@ -53,9 +53,25 @@ Subresource Integrity hashes.
 **Accessibility.** Skip link, visible focus outlines, alt text on every image, semantic landmarks
 (`header`, `main`, `footer`), labelled nav, and reduced-motion support.
 
-## Photo credits
-Replace each line with the photographer and source before submitting (for example "Photo by NAME on Unsplash"):
-- `images/tote.jpg`: 
-- `images/mug.jpg`: 
-- `images/candle.jpg`: 
-- `images/basket.jpg`:
+## Image sources
+These photos are used as placeholder images for a coursework project. I am not the photographer of any of them,
+and all rights remain with the original owners. The sources below are the ones I could trace; where I say
+"similar listing", the exact original page is not confirmed.
+
+- **Candle** (`images/candle.jpg`): photo from
+  [Mason Jar Candle Ideas using Ylang Ylang Scent](https://confessionsofanover-workedmom.com/mason-jar-candle-ideas/)
+  by Ellen Christian, Confessions of an Overworked Mom.
+- **Woven baskets** (`images/basket.jpg`): similar product listings on
+  [Temu](https://www.temu.com/bh/2-woven-baskets-with-handles-festive-decorations-creative-wedding-full-gifts-souvenir-baskets-valentines-day-packaging-baskets-woven-bags-shelf-baskets-home-kitchen-supplies-courtyard-flower-arrangement-baskets-wedding-party-g-606045602686963.html),
+  [SHEIN](https://eur.shein.com/1pc-Woven-Basket-With-Handle-Multipurpose-Storage-Box-Suitable-For-Home-Decor-Wedding-Favors-And-Gift-Packaging-Baby-Shower-Gifts-Souvenir-Baskets-Wooden-Gift-Baskets-Packaging-Baskets-Storage-Baskets-Creative-Gift-Display-p-313280823.html),
+  [Snoonu](https://snoonu.com/product/wooden-gift-baskets/6980c989b90390da6a023496) and
+  [AliExpress](https://www.aliexpress.com/item/1005009149971647.html).
+- **Cup and saucer** (`images/mug.jpg`): similar vintage stoneware listings on
+  [eBay Germany](https://www.ebay.de/itm/387626352448) and
+  [Tradera](https://www.tradera.com/da/item/201105/752337767/kaffe-te-koppar-nittsjo-11-delar).
+- **Tote bag** (`images/tote.jpg`): similar product listings on
+  [IndiaMART](https://www.indiamart.com/proddetail/pu-leather-tote-bags-2855568264491.html) and
+  [Jumia Nigeria](https://www.jumia.com.ng/fashion-simple-elegant-large-capacity-pu-leather-tote-handbag-women-office-large-capacity-quality-shoulder-handbag-customized-new-ladies-bag-designer-bag-luxury-lady-handbag-pu-leather-women-handbags-tote-bag-419316438.html).
+
+The product names, descriptions and prices on the page are made up for this exercise. Replace these photos with
+licensed or original images before using the design for anything beyond coursework.
